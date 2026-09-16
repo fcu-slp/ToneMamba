@@ -1,0 +1,40 @@
+[project]
+name = "tone_mamba"
+version = "0.1.0"
+readme = "README.md"
+requires-python = "==3.12.10"
+dependencies = [
+    "torch==2.11.0",
+    "numpy==2.3.5",
+    "einops==0.8.1",
+    "huggingface-hub==0.35.3",
+    "causal-conv1d==1.6.2.post1",
+    "mamba-ssm==2.3.2.post1",
+]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["tone_mamba"]
+extend_skip = ["dataset", "tonenet-reload"]
+
+[tool.uv]
+package = false
+required-version = ">=0.8.16"
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[tool.uv.extra-build-dependencies]
+causal-conv1d = ["torch==2.11.0+cu128"]
+mamba-ssm = [{ requirement = "torch", match-runtime = true }]
+
+[dependency-groups]
+dev = [
+    "isort>=8.0.1",
+]

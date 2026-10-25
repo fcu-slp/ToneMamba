@@ -2,6 +2,8 @@
 name = "tone_mamba"
 version = "0.1.0"
 readme = "README.md"
+license = "CC-BY-NC-SA-4.0"
+license-files = ["LICENSE"]
 requires-python = "==3.12.10"
 dependencies = [
     "torch==2.11.0",

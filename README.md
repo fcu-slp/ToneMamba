@@ -1,5 +1,7 @@
 # ToneMamaba: Learning Contextualized Tonal Contours with Boundary-Reset State Space Models
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 <div align="center">
   <img src="./assets/boundary_reset.png" alt="" width="400">
 </div>
@@ -102,3 +104,9 @@ sample order and syllable indices.
 Remote download and offline cache reuse were verified.
 
 Details: [checkpoints/validation.md](checkpoints/validation.md).
+
+## License
+
+This project is licensed under the
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+(CC BY-NC-SA 4.0). See [LICENSE](LICENSE) for the full terms.
